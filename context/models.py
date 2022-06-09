@@ -1,5 +1,5 @@
-import pandas as pd
 from context.domains import Dataset
+import pandas as pd
 
 
 class Model:
@@ -20,7 +20,7 @@ class Model:
         return pd.read_csv(f'{this.dname}{fname}', index_col=0)
 
     def new_dframe(self, fname) -> object:
-        this =self.ds
+        this = self.ds
         # pd.read_csv('경로/파일명.csv') Index 지정하지 않음
         return pd.read_csv(f'{this.dname}{fname}')
 
@@ -34,3 +34,4 @@ class Model:
                          index=False)  # do not write index
          '''
         dframe.to_csv(f'{this.sname}{fname}', sep=',', na_rep='NaN')
+
